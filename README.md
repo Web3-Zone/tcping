@@ -14,7 +14,7 @@ cargo build --release
 Usage: tcping <host> [port] [timeout] [count]
 ```
 
-## Demo
+## Examples
 
 ```
 $ ./target/release/tcping google.com
