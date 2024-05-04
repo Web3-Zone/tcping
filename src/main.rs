@@ -55,7 +55,11 @@ fn main() {
     for _ in 0..args.count {
         seq += 1;
         let start = Instant::now();
-        let addr = (args.host.as_str(), args.port).to_socket_addrs().unwrap().next().unwrap();
+        let addr = (args.host.as_str(), args.port)
+            .to_socket_addrs()
+            .unwrap()
+            .next()
+            .unwrap();
         match TcpStream::connect_timeout(&addr, timeout) {
             Ok(_stream) => {
                 let duration = start.elapsed();
